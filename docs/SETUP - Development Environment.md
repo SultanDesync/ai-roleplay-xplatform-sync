@@ -8,21 +8,20 @@ This is where you will **build** the `index.html` web app.
 
 1.  **Code Editor**: Visual Studio Code (VS Code)
     * **Recommendation**: Install the "Live Server" extension from the VS Code marketplace.
-### 2. Project Folder Structure
-This is the official project workspace. Your V1.0 structure must be simple and clean:
-
-/Horizontal_Immersion/
-│
-├── /docs/
-│   ├── DESIGN - Smart Importer V1.0.md
-│   ├── SETUP - Development Environment.md
-│   └── PROCESS - AI Agent Roster.md
-│
-├── index.html          <-- Your V1.0 web app
-├── style.css           <-- Your visual themes and styling
-├── app.js              <-- Your core JavaScript logic
-└── README.md           <-- Your project's central navigation hub
-
+2.  **Project Folder Structure**:
+    ```
+    /Horizontal_Immersion/
+   │
+   ├── /docs/
+   │   ├── DESIGN - Smart Importer V1.0.md
+   │   ├── SETUP - Development Environment.md
+   │   └── PROCESS - AI Agent Roster.md
+   │
+   ├── index.html
+   ├── style.css
+   ├── app.js
+   └── README.md
+    ```
 3.  **Version Control**: Git
     * `git init` in your `/Horizontal_Immersion/` folder.
     * Create a `.gitignore` file.
