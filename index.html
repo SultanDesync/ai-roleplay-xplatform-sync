@@ -3,36 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Upload</title>
+    <title>Horizontal Immersion (V1.0)</title>
+    
+    <!-- This links our (currently empty) stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Upload a File</h1>
-    <input type="file" id="fileUpload">
-    <script>
-        const fileInput = document.getElementById('fileUpload');
 
-        fileInput.addEventListener('change', (event) => {
-            const file = event.target.files[0];
+    <header>
+        <h1>Horizontal Immersion App</h1>
+    </header>
 
-            if (file) {
-                const reader = new FileReader();
+    <main id="app-container">
+        <!-- All our app content will go in here later -->
+        <p>Welcome to the V1.0 App. Content will be loaded here.</p>
+    </main>
 
-                reader.onload = (e) => {
-                    const fileContents = e.target.result;
-                    console.log('File contents:');
-                    console.log(fileContents);
-                    // Further processing of fileContents can be done here.
-                };
+    <footer>
+        <p>Project V1.0</p>
+    </footer>
 
-                reader.onerror = (e) => {
-                    console.error('Error reading file:', e.target.error);
-                };
-
-                // Assuming text file, use readAsText.
-                // For other file types, you might use readAsDataURL, readAsArrayBuffer, etc.
-                reader.readAsText(file);
-            }
-        });
-    </script>
+    <!-- This links our (currently empty) JavaScript file -->
+    <!-- It's placed at the end of <body> to ensure the HTML is loaded first -->
+    <script src="app.js"></script>
 </body>
 </html>
