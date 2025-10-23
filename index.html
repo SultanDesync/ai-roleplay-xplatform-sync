@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+</head>
+<body>
+    <h1>Upload a File</h1>
+    <input type="file" id="fileUpload">
+    <script>
+        const fileInput = document.getElementById('fileUpload');
+
+        fileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = (e) => {
+                    const fileContents = e.target.result;
+                    console.log('File contents:');
+                    console.log(fileContents);
+                    // Further processing of fileContents can be done here.
+                };
+
+                reader.onerror = (e) => {
+                    console.error('Error reading file:', e.target.error);
+                };
+
+                // Assuming text file, use readAsText.
+                // For other file types, you might use readAsDataURL, readAsArrayBuffer, etc.
+                reader.readAsText(file);
+            }
+        });
+    </script>
+</body>
+</html>
