@@ -1,4 +1,19 @@
-/* This file will hold all our styling.
-We will add colors, fonts, and layout rules here.
-For now, it is empty.
-*/
+/* Base layout */
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 0 16px; }
+header, footer { padding: 12px 0; }
+main { max-width: 960px; margin: 0 auto; }
+
+/* Character Panel */
+#character-panel { border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; background: #fafafa; margin-bottom: 16px; }
+#character-panel h2 { margin-top: 0; }
+#character-panel label { display: block; margin: 8px 0 4px; font-weight: 600; }
+#character-name { width: 100%; max-width: 420px; padding: 8px; font-size: 14px; }
+#btn-lookup { padding: 8px 12px; }
+#character-biography { width: 100%; padding: 8px; font-size: 14px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.inline { margin-right: 8px; }
+#known-characters { min-width: 220px; padding: 6px; }
+.control-row button { white-space: nowrap; }
+
+/* Rows and status */
+.control-row { display: flex; gap: 8px; align-items: center; margin: 8px 0 12px; flex-wrap: wrap; }
+.status-line { margin: 6px 0; color: #374151; font-size: 13px; }

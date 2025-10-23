@@ -15,8 +15,46 @@
     </header>
 
     <main id="app-container">
-        <!-- All our app content will go in here later -->
-        <p>Welcome to the V1.0 App. Content will be loaded here.</p>
+        <!-- Character Panel -->
+        <section id="character-panel">
+            <h2>Character</h2>
+            <label for="character-name">Character Name</label>
+            <div class="control-row">
+                <input id="character-name" type="text" placeholder="e.g., Lydia or Jarl Balgruuf" />
+                <button id="btn-lookup" type="button">Lookup</button>
+            </div>
+
+            <div class="control-row">
+                <label for="known-characters" class="inline">Known Characters</label>
+                <select id="known-characters">
+                    <option value="">-- none loaded --</option>
+                </select>
+                <button id="btn-choose-folder" type="button">Choose Conversations Folder</button>
+                <!-- Move Import CSV here -->
+                <button id="btn-import" type="button">Import CSV</button>
+                <input id="file-input" type="file" accept=".csv,text/csv" style="display:none" />
+            </div>
+            <div id="folder-status" class="status-line" aria-live="polite"></div>
+
+            <div class="control-row">
+                <label for="btn-choose-overrides" class="inline">Character Overrides</label>
+                <button id="btn-choose-overrides" type="button">Choose Overrides Folder</button>
+            </div>
+            <div id="overrides-status" class="status-line" aria-live="polite"></div>
+
+            <!-- Fallback hidden directory inputs for browsers without File System Access API -->
+            <input id="input-convo-folder" type="file" webkitdirectory directory multiple style="display:none" />
+            <input id="input-overrides-folder" type="file" webkitdirectory directory multiple accept=".json" style="display:none" />
+
+            <label for="character-biography">Character Biography</label>
+            <textarea id="character-biography" rows="12" placeholder="Biography... (Lookup: JSON > CSV > Default)"></textarea>
+            <div class="control-row">
+                <button id="btn-reset-bio" type="button">Reset to Default</button>
+                <button id="btn-export-profile" type="button">Export Profile (.json)</button>
+            </div>
+            <div id="bio-source" class="status-line" aria-live="polite"></div>
+        </section>
+        <div id="file-info" aria-live="polite" class="status-line"></div>
     </main>
 
     <footer>

@@ -1,0 +1,1 @@
+This is the default character biography. You can customize it by editing this file or by setting a default in Settings. If a character-specific JSON or CSV entry is available, it will take precedence.
